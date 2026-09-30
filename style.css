@@ -1,0 +1,738 @@
+/* =====================================================
+   TRIA ARAFAH
+   MOBILE WEBSITE
+   SOFT BROWN • FEMININE • ELEGANT
+===================================================== */
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    font-family: "Poppins", sans-serif;
+
+    background: #f8f1eb;
+
+    color: #634b3d;
+
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 64px;
+
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(248, 241, 235, 0.92);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(139, 107, 90, 0.12);
+
+    z-index: 1000;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+    font-family: "DM Serif Display", serif;
+
+    font-size: 20px;
+
+    letter-spacing: 1.5px;
+
+    color: #634b3d;
+}
+
+
+/* =====================================================
+   MENU BUTTON
+===================================================== */
+
+.menu-button {
+    width: 38px;
+    height: 38px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #eadbd0;
+
+    color: #795d4d;
+
+    font-size: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.menu-button:active {
+    transform: scale(0.9);
+}
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+.mobile-menu {
+    position: fixed;
+
+    top: 74px;
+    right: 20px;
+
+    width: 190px;
+
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    background: rgba(255, 250, 246, 0.97);
+
+    border-radius: 16px;
+
+    border: 1px solid rgba(139, 107, 90, 0.1);
+
+    box-shadow:
+        0 15px 35px rgba(92, 70, 56, 0.18);
+
+    z-index: 999;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-10px);
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        visibility 0.25s ease;
+}
+
+
+/* MENU TERBUKA */
+
+.mobile-menu.active {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+/* LINK MENU */
+
+.mobile-menu a {
+    display: block;
+
+    padding: 12px 14px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    color: #634b3d;
+
+    font-size: 12px;
+
+    font-weight: 400;
+
+    transition: 0.2s ease;
+}
+
+.mobile-menu a:active {
+    background: #eadbd0;
+
+    transform: scale(0.97);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100svh;
+
+    padding: 100px 25px 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #fffaf6 0%,
+            #f8f1eb 50%,
+            #eadbd0 100%
+        );
+}
+
+
+/* =====================================================
+   HERO DECORATION
+===================================================== */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+
+    background: rgba(169, 132, 114, 0.08);
+
+    top: -130px;
+    left: -100px;
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    border-radius: 50%;
+
+    background: rgba(139, 107, 90, 0.06);
+
+    right: -100px;
+    bottom: -100px;
+}
+
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 360px;
+}
+
+
+/* =====================================================
+   HERO SMALL TEXT
+===================================================== */
+
+.hero-small {
+    display: block;
+
+    margin-bottom: 18px;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    letter-spacing: 4px;
+
+    color: #a98472;
+}
+
+
+/* =====================================================
+   HERO TITLE
+===================================================== */
+
+.hero h1 {
+    font-family: "DM Serif Display", serif;
+
+    font-size: 68px;
+
+    line-height: 0.9;
+
+    font-weight: 400;
+
+    letter-spacing: 1px;
+
+    color: #634b3d;
+
+    margin-bottom: 28px;
+}
+
+
+/* =====================================================
+   HERO DESCRIPTION
+===================================================== */
+
+.hero-description {
+    width: 100%;
+
+    max-width: 300px;
+
+    margin: 0 auto 30px;
+
+    font-size: 12px;
+
+    line-height: 1.9;
+
+    font-weight: 300;
+
+    color: #806758;
+}
+
+
+/* =====================================================
+   HERO BUTTON
+===================================================== */
+
+.hero-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 27px;
+
+    border-radius: 30px;
+
+    background: #9a7562;
+
+    color: #fffaf6;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    letter-spacing: 0.5px;
+
+    box-shadow:
+        0 8px 20px rgba(92, 70, 56, 0.14);
+
+    transition: 0.25s ease;
+}
+
+.hero-button:active {
+    transform: scale(0.96);
+}
+
+
+/* =====================================================
+   GENERAL SECTION
+===================================================== */
+
+section {
+    scroll-margin-top: 70px;
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about {
+    width: 100%;
+
+    padding: 85px 25px;
+
+    text-align: center;
+
+    background: #fffaf6;
+}
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.section-title {
+    margin-bottom: 35px;
+
+    text-align: center;
+}
+
+
+/* TULISAN KECIL */
+
+.section-title span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #b08b79;
+}
+
+
+/* JUDUL */
+
+.section-title h2 {
+    font-family: "DM Serif Display", serif;
+
+    font-size: 38px;
+
+    line-height: 1.1;
+
+    font-weight: 400;
+
+    color: #634b3d;
+}
+
+
+/* =====================================================
+   ABOUT CONTENT
+===================================================== */
+
+.about-content {
+    width: 100%;
+
+    max-width: 340px;
+
+    margin: 0 auto;
+}
+
+.about-content p {
+    font-size: 12px;
+
+    line-height: 2;
+
+    font-weight: 300;
+
+    color: #806758;
+}
+
+
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.gallery {
+    width: 100%;
+
+    padding: 85px 15px;
+
+    background: #f3e7df;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   PHOTO CONTAINER
+===================================================== */
+
+.photo-container {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    margin: 0 auto;
+
+    padding: 10px 0 25px;
+}
+
+
+/* =====================================================
+   PHOTO CARD
+   RASIO 4 : 6
+===================================================== */
+
+.photo-card {
+    width: 30%;
+
+    aspect-ratio: 4 / 6;
+
+    padding: 5px;
+
+    background: #fffaf6;
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 10px 25px rgba(92, 70, 56, 0.13);
+
+    overflow: hidden;
+
+    flex-shrink: 0;
+}
+
+
+/* =====================================================
+   PHOTO
+   TIDAK DI-CROP
+===================================================== */
+
+.photo-card img {
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    background: #f8f1eb;
+
+    border-radius: 2px;
+}
+
+
+/* =====================================================
+   PHOTO POSITION
+===================================================== */
+
+.photo-card:nth-child(1) {
+    transform: rotate(-3deg);
+}
+
+.photo-card:nth-child(2) {
+    transform: translateY(10px);
+}
+
+.photo-card:nth-child(3) {
+    transform: rotate(3deg);
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact {
+    width: 100%;
+
+    padding: 85px 25px;
+
+    text-align: center;
+
+    background: #fffaf6;
+}
+
+.contact > p {
+    width: 100%;
+
+    max-width: 300px;
+
+    margin: 0 auto;
+
+    font-size: 12px;
+
+    line-height: 1.9;
+
+    font-weight: 300;
+
+    color: #806758;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    width: 100%;
+
+    padding: 25px 20px;
+
+    text-align: center;
+
+    background: #634b3d;
+
+    color: #f8f1eb;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   MUSIC BUTTON
+===================================================== */
+
+.music-button {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #9a7562;
+
+    color: #fffaf6;
+
+    font-size: 19px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 1001;
+
+    box-shadow:
+        0 8px 25px rgba(92, 70, 56, 0.25);
+
+    transition: 0.25s ease;
+}
+
+
+/* SAAT DITEKAN */
+
+.music-button:active {
+    transform: scale(0.9);
+}
+
+
+/* SAAT MUSIK BERPUTAR */
+
+.music-button.playing {
+    animation: musicPulse 1.5s infinite;
+}
+
+
+/* =====================================================
+   ANIMASI MUSIK
+===================================================== */
+
+@keyframes musicPulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* =====================================================
+   HP KECIL
+===================================================== */
+
+@media (max-width: 360px) {
+
+    .header {
+        padding: 0 16px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .hero {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .hero-description {
+        font-size: 11px;
+    }
+
+    .gallery {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .photo-container {
+        gap: 6px;
+    }
+
+    .photo-card {
+        width: 30%;
+
+        padding: 4px;
+    }
+
+    .music-button {
+        width: 44px;
+        height: 44px;
+
+        right: 15px;
+        bottom: 15px;
+
+        font-size: 17px;
+    }
+
+}
